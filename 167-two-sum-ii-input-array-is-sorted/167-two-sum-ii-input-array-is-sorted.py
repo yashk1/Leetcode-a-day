@@ -1,13 +1,15 @@
 class Solution:
     def twoSum(self, numbers: List[int], target: int) -> List[int]:
-        hashmap = {}
+        left = 0
+        right = len(numbers)-1
         
-        for index, value in enumerate(numbers):
+        while left < right:
             
-            complement = target - value #7 #2
-            
-            if complement in hashmap: #is 7 in hashmap? NO #2in hashmap?Yes
-                return [hashmap[complement]+1,index+1]
+            if numbers[left] + numbers[right] == target: 
+                return [left+1, right+1]
+            elif  numbers[left] + numbers[right] < target:
+                left += 1
             else:
-                hashmap[value] = index
+                right -= 1
                 
+            
