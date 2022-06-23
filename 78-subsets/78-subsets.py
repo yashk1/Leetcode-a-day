@@ -1,8 +1,7 @@
 class Solution:
     def subsets(self, nums: List[int]) -> List[List[int]]:
-        if not nums:
-            return [[]]
+        op = [[]]
         
-        subsets = self.subsets(nums[:-1])
-        new = [subset + [nums[-1]] for subset in subsets]
-        return subsets + new
+        for number in nums:
+            op = op + [cur + [number] for cur in op]
+        return op
