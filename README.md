@@ -11,6 +11,6 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 4. Is subsquence [here](https://github.com/yashk1/Leetcode-a-day/tree/main/Leetcode75%20(day%2015%20forward)/Problems/392-is-subsequence)
 ### DAY 3
 5. Merege two sorted lists [here](https://github.com/yashk1/Leetcode-a-day/tree/main/Leetcode75%20(day%2015%20forward)/Problems/21-merge-two-sorted-lists)
-6. Reverse a alinked list [here](https://github.com/yashk1/Leetcode-a-day/tree/main/Leetcode75%20(day%2015%20forward)/Problems/206-reverse-linked-list)
+6. Reverse a linked list [here](https://github.com/yashk1/Leetcode-a-day/tree/main/Leetcode75%20(day%2015%20forward)/Problems/206-reverse-linked-list)
 ### DAY 4
 7. Middle of a linked list [here]()
