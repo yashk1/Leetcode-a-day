@@ -1,6 +1,8 @@
 # Leetcode-day
 Collection of LeetCode questions to ace the coding interview! - Created using [LeetHub](https://github.com/QasimWani/LeetHub)
 
+
+(DAY 15 ONWARDS)- This is a playlst from Leetcode to take your dsa skills from easy to hard
 ## Leetcode 75
 
 ### DAY 1
