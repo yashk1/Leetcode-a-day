@@ -18,5 +18,6 @@ class Solution:
                     slow = slow.next
                     fast = fast.next
                 return slow #slow or fast doesn't matter
-                
-    
+                    
+#Time compelxity O(n)
+#Space complexity - O(1)
