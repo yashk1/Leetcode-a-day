@@ -8,12 +8,18 @@ class Node:
 
 class Solution:
     def preorder(self, root: 'Node') -> List[int]:
-        #NLR
+        if root is None:
+            return []
+        #there are values in tree
+        stack ,answer = [root], []
         
-        ans =[]
+        while stack: 
+        #run untill we have traveresd all the elements in a tree. 
+        #Since we are putting root firts andi then all it's children
         
-        if root:
-            ans.append(root.val)
-            for child in root.children:
-                ans.extend(self.preorder(child))
-        return ans
+            cur = stack.pop() #this is a pointer that stores the location of top value in stack
+            answer.append(cur.val)
+            
+            stack.extend(reversed(cur.children)) #adding children from left to right
+            
+        return answer
