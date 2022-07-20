@@ -19,3 +19,6 @@ class Solution:
                 s2.append(i)
         
         return s1 == s2
+    
+#Time: O(M + N), where M <= 200 is length of string s, N <= 200 is length of string t.
+#Space: O(M + N)
