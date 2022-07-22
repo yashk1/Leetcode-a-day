@@ -45,3 +45,8 @@ class Solution:
 			j = j - 1
 
 		return True					# This means both the strings are equivalent.
+
+#time complexity - O(n)
+#Space complexity - O(1)
+
+#video explanation - https://www.youtube.com/watch?v=vgog1EuEJYQ&ab_channel=NickWhite
