@@ -4,13 +4,15 @@ class Solution:
         #even number divide by 2
         #odd number subtract 1
         
+        #using counting bits
+        
         steps = 0
-        while num > 0 :
-            if num % 2 == 0:
-                num = num // 2
-                steps += 1
+        
+        binary = bin(num)[2:] #removing 0b from the binary 
+        
+        for bit in binary:
+            if bit == '1':
+                steps += 2
             else:
-                num = num - 1
                 steps +=1
-        return steps
-            
+        return steps - 1
