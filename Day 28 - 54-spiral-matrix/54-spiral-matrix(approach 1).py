@@ -34,3 +34,6 @@ class Solution:
             down -=1
             
         return res
+
+#time - O(m*n)
+#sapce - O(1)- Remember that we don't include the output array in the space complexity.
