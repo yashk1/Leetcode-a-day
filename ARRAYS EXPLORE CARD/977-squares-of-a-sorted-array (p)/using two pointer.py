@@ -22,3 +22,7 @@ class Solution:
             result[i] = square * square
             
         return result
+
+
+#time - O(N)
+#space- O(1) not accounting for output array

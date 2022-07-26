@@ -9,3 +9,6 @@ class Solution:
             else:
                 curr_max = 0
         return maxx
+
+#time - O(n)
+#space - O(1)
