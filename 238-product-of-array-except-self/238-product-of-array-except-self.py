@@ -18,7 +18,5 @@ class Solution:
         
         return answer
         
-        
-
-
-        #
+#time - O(n)
+#space - O(n)
