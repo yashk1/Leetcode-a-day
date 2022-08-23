@@ -3,20 +3,15 @@ class Solution:
         
         length  = len(nums)
         
-        l, r, answer = [0]*length, [0]*length, [0]*length
+        answer = [0] * length
+        answer[0] = 1
         
-        l[0]=1
         for i in range(1, length):
-            l[i] = nums[i-1] * l[i-1]
+            answer[i] = answer[i-1] * nums[i-1]
+         
+        r = 1
+        for i in reversed(range(length)):
+            answer[i] = answer[i] * r
+            r = r*nums[i]
             
-        r[length-1] = 1
-        for i in reversed(range(length -1 )):
-            r[i] = r[i+1] * nums[i+1]
-        
-        for i in range(length):
-            answer[i] = l[i] * r[i]
-        
         return answer
-        
-#time - O(n)
-#space - O(n)
