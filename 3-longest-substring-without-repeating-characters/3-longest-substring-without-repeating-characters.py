@@ -1,19 +1,23 @@
 class Solution:
     def lengthOfLongestSubstring(self, s: str) -> int:
         seen = {}
+        
         l = 0
-        output = 0
+        op = 0
+        
         for r in range(len(s)):
-            """
-            If s[r] not in seen, we can keep increasing the window size by moving right pointer
-            """
             if s[r] not in seen:
-                output = max(output,r-l+1)
-       
+                op = max(op, r-l+1)
             else:
-                if seen[s[r]] < l:
-                    output = max(output,r-l+1)
+                #it is not necessary if the elemtn is in seen, it can be part of a diff substring for that we will check by comapring left pointer with index of seenr
+                if l > seen[s[r]]:
+                    op = max(op, r-l+1)
                 else:
-                    l = seen[s[r]] + 1
+                    l = seen[s[r]] + 1 #still confusing
+                    
             seen[s[r]] = r
-        return output
+        return op
+        
+# abcabcbb- substring w/o repeating characters
+#   ^
+
