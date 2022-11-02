@@ -1,15 +1,17 @@
 class Solution:
-    def rotate(self, nums: List[int], k: int) -> None:
-        #create a new array 
-        n = len(nums)
-        
-        res = [0] * n
-        
-        for i in range(n):
-            res[(i+k) % n] = nums[i] 
-            # %n is used to solve the case where we rotate by let's say 404.
-            #technically it is only rotating by 4 and also rotating 
+    def reverse(self, nums, start, end):
+        while start < end:
+            nums[start], nums[end] = nums[end], nums[start] #reverse
+            start, end = start+1 , end-1 #moving start and end point
             
-        nums[:] = res
+    def rotate(self, nums: List[int], k: int) -> None:
+        
+        n = len(nums)
+        k = k % n
+        
+        self.reverse(nums, 0, n-1)
+        self.reverse(nums, 0, k-1) 
+        self.reverse(nums, k, n-1)
+                
         
         
